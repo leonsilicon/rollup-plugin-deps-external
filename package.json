@@ -1,6 +1,6 @@
 {
 	"name": "rollup-plugin-deps-external",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"description": "Rollup plugin to automatically exclude package.json dependencies from your bundle.",
 	"license": "MIT",
 	"repository": {
