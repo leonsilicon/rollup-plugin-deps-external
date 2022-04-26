@@ -1,1 +1,1 @@
-export { externalDeps as default } from './plugin.js';
+export { depsExternal as default } from './plugin.js';

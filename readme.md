@@ -1,4 +1,4 @@
-# rollup-plugin-external-deps
+# rollup-plugin-deps-external
 
 [Rollup](https://rollupjs.org/) plugin to automatically exclude package.json dependencies from your bundle.
 
@@ -7,19 +7,19 @@ Most of the code is borrowed from the excellent [rollup-plugin-auto-external](ht
 ## Install
 
 ```shell
-npm install --save-dev rollup-plugin-external-deps
+npm install --save-dev rollup-plugin-deps-external
 ```
 
 ## Usage
 
-Add the `externalDeps` plugin to your Rollup configuration:
+Add the `depsExternal` plugin to your Rollup configuration:
 
 ```js
-import externalDeps from 'rollup-plugin-external-deps';
+import depsExternal from 'rollup-plugin-deps-external';
 
 export default {
   input: 'index.js',
-  plugins: [externalDeps()],
+  plugins: [depsExternal()],
 };
 ```
 
@@ -27,12 +27,12 @@ You can pass options to the plugin as well:
 
 ```js
 import path from 'path';
-import externalDeps from 'rollup-plugin-external-deps';
+import depsExternal from 'rollup-plugin-deps-external';
 
 export default {
   input: 'index.js',
   plugins: [
-    externalDeps({
+    depsExternal({
       builtins: false,
       dependencies: true,
       packagePath: path.resolve('./packages/module/package.json'),
@@ -42,15 +42,15 @@ export default {
 };
 ```
 
-`rollup-plugin-external-deps` is compatible with an existing Rollup `external` function.
+`rollup-plugin-deps-external` is compatible with an existing Rollup `external` function.
 
 ```js
-import externalDeps from 'rollup-plugin-external-deps';
+import depsExternal from 'rollup-plugin-deps-external';
 
 export default {
   input: 'index.js',
   external: (id) => id.includes('babel-runtime'),
-  plugins: [externalDeps()],
+  plugins: [depsExternal()],
 };
 ```
 

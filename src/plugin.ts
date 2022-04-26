@@ -12,14 +12,14 @@ import type {
 } from '~/types.js';
 import externalToFunction from '~/utils/external.js';
 
-export function externalDeps({
+export function depsExternal({
 	builtins = true,
 	dependencies = true,
 	packagePath,
 	peerDependencies = true,
 }: ExternalDepsPluginOptions = {}): Plugin {
 	return {
-		name: 'external-deps',
+		name: 'deps-external',
 		options(opts) {
 			let pkg: NormalizedPackageJson;
 			if (packagePath) {

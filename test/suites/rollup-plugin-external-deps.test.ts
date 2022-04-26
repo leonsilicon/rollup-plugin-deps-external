@@ -6,7 +6,7 @@ import type { RollupOptions } from 'rollup';
 import { rollup } from 'rollup';
 import { describe, expect, it } from 'vitest';
 
-import externalDeps from '~/index.js';
+import depsExternal from '~/index.js';
 import type { ExternalDepsPluginOptions } from '~/types.js';
 
 async function bundle(
@@ -16,7 +16,7 @@ async function bundle(
 	return rollup({
 		external,
 		input,
-		plugins: [externalDeps(options), nodeResolve(), commonjs()],
+		plugins: [depsExternal(options), nodeResolve(), commonjs()],
 	})
 		.then(async (bundle) => bundle.generate({ format: 'esm' }))
 		.then((result) => result.output[0].code)
@@ -27,7 +27,7 @@ async function bundle(
 
 describe('autoExternal(options)', () => {
 	it('should have a name', () => {
-		expect(externalDeps().name).toEqual('external-deps');
+		expect(depsExternal().name).toEqual('deps-external');
 	});
 
 	it('should add dependencies by default', async () =>
