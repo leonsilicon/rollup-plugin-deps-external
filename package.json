@@ -16,6 +16,7 @@
 	"type": "module",
 	"exports": "./src/index.ts",
 	"scripts": {
+		"release": "lionp",
 		"preinstall": "pnpm build",
 		"prepare": "lion-git-hooks",
 		"build": "node-ts ./scripts/build.ts",
@@ -44,5 +45,8 @@
 	"dependencies": {
 		"read-pkg": "^7.1.0",
 		"resolve": "^1.22.0"
+	},
+	"publishConfig": {
+		"directory": "dist"
 	}
 }
