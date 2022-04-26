@@ -46,14 +46,15 @@ export function depsExternal({
 				packageIds.push(...builtinModules.flatMap((m) => [m, `node:${m}`]));
 			}
 
-			packageIds = packageIds.filter((packageId) => {
-				try {
-					resolve.sync(packageId);
-					return true;
-				} catch {
-					return false;
-				}
-			});
+			packageIds = packageIds
+				.map((packageId) => {
+					try {
+						return resolve.sync(packageId);
+					} catch {
+						return false;
+					}
+				})
+				.filter((result) => result !== false) as string[];
 
 			const originalExternal = externalToFunction(opts.external);
 
