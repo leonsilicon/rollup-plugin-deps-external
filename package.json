@@ -1,0 +1,48 @@
+{
+	"name": "rollup-plugin-external-deps",
+	"version": "0.0.0",
+	"description": "Rollup plugin to automatically exclude package.json dependencies and peerDependencies from your bundle.",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/leonzalion/rollup-plugin-external-deps.git"
+	},
+	"homepage": "https://github.com/leonzalion/rollup-plugin-external-deps#readme",
+	"author": {
+		"name": "Leon Si",
+		"email": "contact@leonzalion.com",
+		"url": "https://leonzalion.com"
+	},
+	"type": "module",
+	"exports": "./src/index.ts",
+	"scripts": {
+		"preinstall": "pnpm build",
+		"prepare": "lion-git-hooks",
+		"build": "node-ts ./scripts/build.ts",
+		"start": "node-ts ./src/index.ts",
+		"test": "vitest run",
+		"lint": "eslint --cache --fix .",
+		"prettier": "prettier --write .",
+		"tc": "tsc --noEmit"
+	},
+	"devDependencies": {
+		"@leonzalion/configs": "latest",
+		"@rollup/plugin-commonjs": "^22.0.0",
+		"@rollup/plugin-node-resolve": "^13.2.1",
+		"@types/node": "latest",
+		"@types/resolve": "^1.20.2",
+		"@types/rollup-plugin-node-builtins": "^2.1.2",
+		"desm": "latest",
+		"eslint-define-config": "latest",
+		"execa": "latest",
+		"lion-fixture": "^1.1.1",
+		"lion-system": "latest",
+		"rollup": "^2.70.2",
+		"typescript": "latest",
+		"vitest": "latest"
+	},
+	"dependencies": {
+		"read-pkg": "^7.1.0",
+		"resolve": "^1.22.0"
+	}
+}

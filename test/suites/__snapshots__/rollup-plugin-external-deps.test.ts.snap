@@ -1,0 +1,200 @@
+// Vitest Snapshot v1
+
+exports[`autoExternal(options) > should add builtins by default 1`] = `
+"import require$$0 from 'path';
+
+const path = require$$0;
+
+var builtins = path;
+
+export { builtins as default };
+"
+`;
+
+exports[`autoExternal(options) > should add dependencies by default 1`] = `
+"var foo = 'foo';
+
+var bar$1 = 'bar';
+
+const bar = bar$1;
+
+var bar_1 = bar;
+
+var baz = 'baz';
+
+var index = \`\${foo}\${bar_1}\${baz}\`;
+
+export { index as default };
+"
+`;
+
+exports[`autoExternal(options) > should add peerDependencies by default 1`] = `
+"var foo = 'foo';
+
+var bar$1 = 'bar';
+
+const bar = bar$1;
+
+var bar_1 = bar;
+
+var baz = 'baz';
+
+var index = \`\${foo}\${bar_1}\${baz}\`;
+
+export { index as default };
+"
+`;
+
+exports[`autoExternal(options) > should handle a custom package file path 1`] = `
+"var foo = 'foo';
+
+var bar$1 = 'bar';
+
+const bar = bar$1;
+
+var bar_1 = bar;
+
+var baz = 'baz';
+
+var index = \`\${foo}\${bar_1}\${baz}\`;
+
+export { index as default };
+"
+`;
+
+exports[`autoExternal(options) > should handle a directory path as the packagePath 1`] = `
+"var foo = 'foo';
+
+var bar$1 = 'bar';
+
+const bar = bar$1;
+
+var bar_1 = bar;
+
+var baz = 'baz';
+
+var index = \`\${foo}\${bar_1}\${baz}\`;
+
+export { index as default };
+"
+`;
+
+exports[`autoExternal(options) > should handle adding builtins for a specific Node.js version 1`] = `
+"import require$$0 from 'os';
+
+const os = require$$0;
+
+var builtins6_0_0 = os;
+
+export { builtins6_0_0 as default };
+"
+`;
+
+exports[`autoExternal(options) > should handle cherry picked modules 1`] = `
+"var foo = 'foo';
+
+var bar = 'bar';
+
+var baz = 'baz';
+
+var index = \`\${foo}\${bar}\${baz}\`;
+
+export { index as default };
+"
+`;
+
+exports[`autoExternal(options) > should handle disabling builtins 1`] = `
+"import require$$0 from 'path';
+
+const path = require$$0;
+
+var builtins = path;
+
+export { builtins as default };
+"
+`;
+
+exports[`autoExternal(options) > should handle disabling dependencies 1`] = `
+"var foo = 'foo';
+
+var bar$1 = 'bar';
+
+const bar = bar$1;
+
+var bar_1 = bar;
+
+var baz = 'baz';
+
+var index = \`\${foo}\${bar_1}\${baz}\`;
+
+export { index as default };
+"
+`;
+
+exports[`autoExternal(options) > should handle disabling peerDependencies 1`] = `
+"var foo = 'foo';
+
+var bar$1 = 'bar';
+
+const bar = bar$1;
+
+var bar_1 = bar;
+
+var baz = 'baz';
+
+var index = \`\${foo}\${bar_1}\${baz}\`;
+
+export { index as default };
+"
+`;
+
+exports[`autoExternal(options) > should handle extending external array 1`] = `
+"import baz from 'baz';
+
+var foo = 'foo';
+
+var bar$1 = 'bar';
+
+const bar = bar$1;
+
+var bar_1 = bar;
+
+var index = \`\${foo}\${bar_1}\${baz}\`;
+
+export { index as default };
+"
+`;
+
+exports[`autoExternal(options) > should handle extending external function 1`] = `
+"import baz from 'baz';
+
+var foo = 'foo';
+
+var bar$1 = 'bar';
+
+const bar = bar$1;
+
+var bar_1 = bar;
+
+var index = \`\${foo}\${bar_1}\${baz}\`;
+
+export { index as default };
+"
+`;
+
+exports[`autoExternal(options) > should handle scoped modules 1`] = `
+"var foo = '@scope/foo';
+
+var bar$1 = '@scope/bar';
+
+const bar = bar$1;
+
+var bar_1 = bar;
+
+var baz = '@scope/baz';
+
+var index = \`\${foo}\${bar_1}\${baz}\`;
+
+export { index as default };
+"
+`;
