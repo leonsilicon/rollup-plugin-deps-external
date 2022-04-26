@@ -82,4 +82,4 @@ Path to a package.json file or its containing directory.
 
 Type: `boolean`
 \
-Default: `true`.
+Default: `true`
